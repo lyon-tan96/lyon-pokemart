@@ -38,7 +38,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .csrf().disable()
-                .authorizeRequests().antMatchers("/","/authenticate/**", "/sign-up","/main.d020c918adccd2a2.js", "/polyfills.1b86ba5ea03ada84.js", "/runtime.74b1f91778e23cc6.js","/scripts.b23226fd74f8ca0e.js","/styles.5a6d39e1905c654a.css","/assets/**").permitAll()
+                .authorizeRequests().antMatchers("/","/authenticate/**", "/register","/main.e019f99013bbba4e.js", "/polyfills.1b86ba5ea03ada84.js", "/runtime.74b1f91778e23cc6.js","/scripts.b23226fd74f8ca0e.js","/styles.5a6d39e1905c654a.css","/assets/**").permitAll()
                 .anyRequest().authenticated()
                 .and().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);

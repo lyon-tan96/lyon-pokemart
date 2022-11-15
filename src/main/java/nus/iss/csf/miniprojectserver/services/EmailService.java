@@ -27,10 +27,8 @@ public class EmailService {
 
         msg.setTo(opt.get());
 
-//        msg.setSubject("Your order %s has been placed!".formatted(content.getOrderId()));
-        msg.setSubject("Your order %s has been placed!");
-//         msg.setText("Dear %s, \n \n Thank you for your purchase. Kindly PayNow $%s to 91234567 to begin the order process. \n \n Thank you! \n \n Regards \n PokeMart".formatted(content.getName(), content.getAmount()));
-        msg.setText("Dear %s, \n \n Thank you for your purchase. Kindly PayNow $%s to 91234567 to begin the order process. \n \n Thank you! \n \n Regards \n PokeMart");
+        msg.setSubject("Your order %s has been placed!".formatted(content.getOrderId()));
+        msg.setText("Dear %s, \n \n Thank you for your purchase. Kindly PayNow $%s to 91234567 to begin the order process. \n \n Thank you! \n \n Regards \n PokeMart".formatted(content.getName(), content.getAmount()));
 
         javaMailSender.send(msg);
     }
